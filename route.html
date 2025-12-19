@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangzhou Travel Guide - Classic Routes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .route-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .route-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .route-img {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .route-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .route-card:hover .route-img img {
+            transform: scale(1.05);
+        }
+
+        .route-img::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        }
+
+        .route-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .route-content {
+            padding: 25px;
+        }
+
+        .route-content p {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+        }
+
+        .route-content ul {
+            margin-bottom: 20px;
+        }
+
+        .route-content li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .route-content li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .route-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Hangzhou Travel</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="route.html" class="active">Classic Routes</a></li>
+                    <li><a href="scenic.html">Attractions</a></li>
+                    <li><a href="tips.html">Travel Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Classic Travel Routes in Hangzhou</h2>
+
+        <div class="route-list">
+            <div class="route-card">
+                <div class="route-img">
+                    <img src="images/route1.jpg" alt="West Lake Leisure Route">
+                    <div class="route-title">West Lake Leisure Route</div>
+                </div>
+                <div class="route-content">
+                    <p>Walk through the Ten Scenes of West Lake, feel the poetic charm of "always charming in light or heavy makeup", suitable for leisure walking and photo taking, perfect for all ages.</p>
+                    <ul>
+                        <li>Stop 1: Su Causeway Spring Dawn (cherry blossom viewing in spring, beautiful scenery all year round)</li>
+                        <li>Stop 2: Three Pools Mirroring the Moon (iconic landscape of West Lake, take a boat to the island)</li>
+                        <li>Stop 3: Leifeng Pagoda (climb up to overlook the panoramic view of West Lake)</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 1 Day</p>
+                    <a href="scenic.html" class="btn">View Attractions</a>
+                </div>
+            </div>
+
+            <div class="route-card">
+                <div class="route-img">
+                    <img src="images/route2.jpg" alt="Lingyin Temple Zen Route">
+                    <div class="route-title">Lingyin Temple Zen Route</div>
+                </div>
+                <div class="route-content">
+                    <p>Visit the thousand-year-old ancient temple, experience Zen culture and quiet natural scenery, suitable for visitors who like tranquility and seek spiritual relaxation.</p>
+                    <ul>
+                        <li>Stop 1: Lingyin Temple (a famous Buddhist temple in China, with a long history and strong incense)</li>
+                        <li>Stop 2: Feilai Peak (a treasure trove of stone carvings, with Buddhist statues from the Five Dynasties to the Yuan Dynasty)</li>
+                        <li>Stop 3: Yongfu Temple (hidden beside Lingyin Temple, quiet environment, ideal for meditation and blessing)</li>
+                    </ul>
+                    <p><strong>Duration:</strong> Half Day - 1 Day</p>
+                    <a href="scenic.html" class="btn">View Attractions</a>
+                </div>
+            </div>
+
+            <div class="route-card">
+                <div class="route-img">
+                    <img src="images/route3.jpg" alt="Qiandao Lake Resort Route">
+                    <div class="route-title">Qiandao Lake Resort Route</div>
+                </div>
+                <div class="route-content">
+                    <p>Wander among the thousand islands and clear waters, experience the charm of lakes, mountains and islands, suitable for family vacations and leisure relaxation.</p>
+                    <ul>
+                        <li>Stop 1: Central Lake Area (climb Meifeng Island to overlook the panoramic view of Qiandao Lake)</li>
+                        <li>Stop 2: Yule Island (experience fisherman's life and taste organic fish from Qiandao Lake)</li>
+                        <li>Stop 3: Moonlight Island (composed of several small islands, walk on the floating bridge and enjoy the lake view)</li>
+                    </ul>
+                    <p><strong>Duration:</strong> 1-2 Days</p>
+                    <a href="scenic.html" class="btn">View Attractions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>©2025 Hangzhou Travel Guide </p>
+           
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangzhou Travel Guide - Attractions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .scenic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .scenic-item {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            transition: var(--transition);
+        }
+
+        .scenic-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .scenic-img {
+            width: 40%;
+            flex-shrink: 0;
+        }
+
+        .scenic-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .scenic-content {
+            padding: 25px;
+            width: 60%;
+        }
+
+        .scenic-content h3 {
+            color: var(--secondary-color);
+            font-size: 22px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .scenic-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .scenic-list {
+                grid-template-columns: 1fr;
+            }
+
+            .scenic-item {
+                flex-direction: column;
+            }
+
+            .scenic-img,
+            .scenic-content {
+                width: 100%;
+            }
+
+            .scenic-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Hangzhou Travel</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="route.html">Classic Routes</a></li>
+                    <li><a href="scenic.html" class="active">Attractions</a></li>
+                    <li><a href="tips.html">Travel Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2 class="section-title">Top Attractions in Hangzhou</h2>
+
+        <div class="scenic-list">
+            <div class="scenic-item">
+                <div class="scenic-img">
+                    <img src="images/scenic1.jpg" alt="West Lake">
+                </div>
+                <div class="scenic-content">
+                    <h3>West Lake Scenic Area</h3>
+                    <p>The iconic attraction of Hangzhou and a UNESCO World Heritage Site. It consists of one mountain (Gushan Mountain), two pagodas (Leifeng Pagoda and Baochu Pagoda), three islands (Three Pools Mirroring the Moon, Huxin Pavilion, Ruangong Dun) and four causeways, where natural scenery and cultural relics complement each other.</p>
+                    <p><strong>Highlight Experience:</strong> Take a boat tour to visit Three Pools Mirroring the Moon, enjoy the night view light show of West Lake, view cherry blossoms on Su Causeway in spring, and appreciate osmanthus on Bai Causeway in autumn.</p>
+                </div>
+            </div>
+
+            <div class="scenic-item">
+                <div class="scenic-img">
+                    <img src="images/scenic2.jpg" alt="Lingyin Temple">
+                </div>
+                <div class="scenic-content">
+                    <h3>Lingyin Temple</h3>
+                    <p>Founded in the first year of Xianhe in the Eastern Jin Dynasty, it is one of the top ten ancient Zen temples in Chinese Buddhism. Backing onto Beigao Peak and facing Feilai Peak, it has a quiet environment and strong incense. The temple houses a large number of ancient cultural relics and Buddha statues, with simple and elegant architectural style.</p>
+                    <p><strong>Highlight Experience:</strong> Burn incense and pray for blessings, visit the Mahavira Hall and Medicine Buddha Hall, and admire the stone carving art of Feilai Peak.</p>
+                </div>
+            </div>
+
+            <div class="scenic-item">
+                <div class="scenic-img">
+                    <img src="images/scenic3.jpg" alt="Xixi Wetland">
+                </div>
+                <div class="scenic-content">
+                    <h3>Xixi National Wetland Park</h3>
+                    <p>China's first national wetland park, known as the "Kidney of the City". It is famous for its typical Jiangnan water town scenery of "one stream, one smoke". The wetland has crisscrossing rivers and canals, dense reeds, and is home to a variety of birds and aquatic organisms.</p>
+                    <p><strong>Highlight Experience:</strong> Take a wooden boat to cruise through the river channels, visit Shentan Kou and Yanshui Fishing Village, and experience the original ecological wetland style.</p>
+                </div>
+            </div>
+
+            <div class="scenic-item">
+                <div class="scenic-img">
+                    <img src="images/scenic4.jpg" alt="Hangzhou Cuisine">
+                </div>
+                <div class="scenic-content">
+                    <h3>Hangzhou Cuisine Guide</h3>
+                    <p>Hangzhou cuisine is characterized by "freshness, crispness and elegance". In addition to classic dishes such as West Lake Vinegar Fish, Longjing Shrimp and Beggar's Chicken, there are also local snacks like Congbao Hui, Pian'er Chuan Noodles and Dingsheng Cake, which are unforgettable.</p>
+                    <p><strong>Recommended Places:</strong> Hefang Street Historical and Cultural Block, Southern Song Dynasty Imperial Street, Hubin Yintai Food City, where you can stroll around the ancient streets and taste various local delicacies in one stop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>©2025 Hangzhou Travel Guide </p>
+       
+        </div>
+    </footer>
+</body>
+</html>

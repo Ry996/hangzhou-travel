@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangzhou Travel Guide - Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .banner {
+            height: 60vh;
+            background: url("images/banner.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .banner-text {
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .banner-text h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .intro-img img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .intro-text h3 {
+            font-size: 28px;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+            color: var(--gray-color);
+        }
+
+        @media (max-width: 768px) {
+            .banner-text h2 {
+                font-size: 32px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Hangzhou Travel</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="route.html">Classic Routes</a></li>
+                    <li><a href="scenic.html">Attractions</a></li>
+                    <li><a href="tips.html">Travel Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="banner-text">
+            <h2>Paradise on Earth · Hangzhou</h2>
+            <p>Lakes, mountains, ancient charm and modern vibes, explore poetic Hangzhou</p>
+            <a href="route.html" class="btn">View Classic Routes</a>
+        </div>
+    </section>
+
+    <section class="intro container">
+        <div class="intro-img">
+            <img src="images/intro.jpg" alt="Hangzhou Scenery">
+        </div>
+        <div class="intro-text">
+            <h3>About Hangzhou</h3>
+            <p>Located in northern Zhejiang Province, Hangzhou, historically known as Lin'an, is a core city in the Yangtze River Delta with a history of over 2,200 years. As the home of the West Lake, a UNESCO World Heritage Site, Hangzhou combines the natural beauty of lakes and mountains with the cultural heritage of an ancient capital.</p>
+            <p>The tranquil Lingyin Temple, the clear Qiandao Lake, and the serene Xixi Wetland together form the unique charm of this "Paradise on Earth". Hangzhou's cuisine is also renowned worldwide, with classic dishes like West Lake Vinegar Fish, Longjing Shrimp, and Beggar's Chicken offering a delicate and fresh taste of local flavors.</p>
+            <a href="scenic.html" class="btn">Explore Attractions</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>©2025 Hangzhou Travel Guide </p>
+            
+        </div>
+    </footer>
+</body>
+</html>
